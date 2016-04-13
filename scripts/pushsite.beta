@@ -44,8 +44,8 @@ else
     exit 1
 fi
 
-VARWWW="/srv/www/beta.2016.postgresopen.org/media"
-GITREPO="/home/${USER}/git/pgopen2016/media"
+VARWWW="/srv/www/beta.2016.postgresopen.org/shared"
+GITREPO="/home/${USER}/git/pgopen2016/shared"
 
 if [ -z "$VARWWW" -o -z "$GITREPO" ]; then
   echo "Must have var/www and git repo values set!"
