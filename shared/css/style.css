@@ -596,7 +596,7 @@
 		}
 
 	ul {
-		list-style-type: none;
+		list-style-type: circle;
 		margin: 0 0 2em 0;
 	}
 
@@ -1089,7 +1089,6 @@
 			.wrapper .box {
 				background-color: #fff;
 				padding: 3em 2.5em;
-				height: 47em;
 			}
 
 				.wrapper.style1 .box h2, .wrapper.style1 .box h3, .wrapper.style1 .box h4, .wrapper.style1 .box h5, .wrapper.style1 .box h6 {
