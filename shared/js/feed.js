@@ -10,7 +10,7 @@ $(function() {
 
   // get the posts
   $.ajax({
-    url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q='+RSSUrl+'&num=3',
+    url: 'https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q='+RSSUrl+'&num=3',
     dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
     success: createPosts
   });
