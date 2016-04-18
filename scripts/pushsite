@@ -22,6 +22,9 @@ fi
 # last two revisions of the config. Basically attempting to catch an accidental 
 # concatination or similar badness.
 
+# Change all of the links from beta to prod
+find $GITREPO -name '*.html' -print0 | xargs -0 sed -i -e 's://beta.postgresopen.org://postgresopen.org:g' -e 's://beta2016.postgresopen.org://2016.postgresopen.org:g'
+
 echo "diff for site:"
 echo -------------------------
 sudo diff -uNr $VARWWW $GITREPO
@@ -44,8 +47,8 @@ else
     exit 1
 fi
 
-VARWWW="/srv/www/2016.postgresopen.org/media"
-GITREPO="/home/${USER}/git/pgopen2016/media"
+VARWWW="/srv/www/2016.postgresopen.org/shared"
+GITREPO="/home/${USER}/git/pgopen2016/shared"
 
 if [ -z "$VARWWW" -o -z "$GITREPO" ]; then
   echo "Must have var/www and git repo values set!"
@@ -85,3 +88,5 @@ else
     exit 1
 fi
 
+# Change all of the links back to beta
+find $GITREPO -name '*.html' -print0 | xargs -0 sed -i -e 's://postgresopen.org://beta.postgresopen.org:g' -e 's://2016.postgresopen.org://beta2016.postgresopen.org:g'

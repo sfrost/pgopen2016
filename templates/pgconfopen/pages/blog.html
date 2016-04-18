@@ -1,6 +1,7 @@
 {%extends "pgconfopen/base.html" %}
 {%block content%}
 {% load staticfiles %}
+{%load markup%}
 		<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="container">
@@ -10,27 +11,16 @@
 						<h2>Blog</h2>
 					</header>
 
+{%for blog in blogposts %}
           <!-- Sponsorship -->
           <section class="section">
             <hr>
-            <h3>Blog Title</h3>
-            <h4>Author, Date</h4>
-            <p>PostgresOpen 2016 will be held on September 13-16th in Dallas, at the Westin Galleria Dallas. It will deliver three days packed with tutorials and presentations about PostgreSQL and related technologies, one day of extended trainings, and the usual hallway and social track!
-            </br>
-            We target entrepreneurs, technologies and decision-makers on the leading edge of data management, open source database innovation and disruption of the database industry. PostgresOpen will promote the business of PostgreSQL as well as its use and development.</p>
-            </p>
+            <h3>{{blog.title}}</h3>
+            <h4>Posted By: {{blog.sponsor.name}} on {{blog.posttime|date:"M d Y"}}</h4>
+            {{blog.content|markdown}}
             <hr>
           </section>
-
-          <section class="section">
-            <h3>Blog Title</h3>
-            <h4>Author, Date</h4>
-            <p>PostgresOpen 2016 will be held on September 13-16th in Dallas, at the Westin Galleria Dallas. It will deliver three days packed with tutorials and presentations about PostgreSQL and related technologies, one day of extended trainings, and the usual hallway and social track!
-            </br>
-            We target entrepreneurs, technologies and decision-makers on the leading edge of data management, open source database innovation and disruption of the database industry. PostgresOpen will promote the business of PostgreSQL as well as its use and development.</p>
-            </p>
-            <hr>
-          </section>
+{%endfor%}
 
         </div>
       </section>
