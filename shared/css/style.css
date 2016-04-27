@@ -31,11 +31,13 @@
 	}
 
 	a {
+		font-weight: bold;
 		color: #383b43;
 		text-decoration: none;
 	}
 
 		a:active, a:hover {
+			color: #d43c61;
 			text-decoration: underline;
 		}
 
