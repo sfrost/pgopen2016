@@ -1070,7 +1070,7 @@
 			margin-bottom: 1.75em;
 		}
 
-		section#specialevent {
+		section.specialevent {
 			background-size: cover;
 			background-image: (url(../images/golf.jpg);
 			background-position: center center;
