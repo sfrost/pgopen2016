@@ -1,0 +1,41 @@
+{%extends "pgconfopen/base.html" %}
+{%block content%}
+{% load staticfiles %}
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major">
+            <span class="header"><img src="{% static 'images/golf.svg' %}" alt="" /></span>
+						<h2>Special Event</h2>
+					</header>
+          <hr>
+          <section class="specialevent"></section>
+          <!-- Who we are -->
+          <section class="section">
+            <hr>
+            <h3>Announcing the First Annual PostgresOpen Golf Tournament!</h3>
+
+            <p>Join us in playing golf to benefit the  <A HREF=”http://postgresql.us/node/167”>United States PostgreSQL Association’s Diversity Scholarship Fund</A>
+              This scholarship fund provides assistance to underrepresented groups to participate in PostgreSQL events, to foster their inclusion in our community.  All proceeds from this event will be donated to the scholarship fund and we will announce the total raised at the conference closing session!
+            </p>
+
+            <p>All skill levels from beginner to pro are welcome and encouraged to attend this charity event!</p>
+
+            <p>This event will be held on Friday, September 16th, 2016 at a golf course near the conference hotel.  Transportation to and from the course will be provided from the Westin.
+            </p>
+
+            <p>
+              <b>Tee Time:</b> 8am<br>
+              <b>Fee Per Player:</b> $100<br>
+              <b>Club Rental:</b> $50 (optional)
+            </p>
+
+            <p><a href="">Click here to register for this special charity event!</a></p>
+
+            <hr>
+          </section>
+
+        </div>
+      </section>
+{% endblock %}
